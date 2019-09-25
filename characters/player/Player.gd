@@ -13,6 +13,7 @@ const LEFT_UP := Vector2(-1, -1)
 
 
 func _ready():
+	# The default look direction is RIGHT
 	update_look_direction(DOWN)
 
 
@@ -35,6 +36,8 @@ func get_input_direction():
 
 
 func update_look_direction(direction):
+	# TODO: Change sprite based on look direction
+	# TODO: Update rayCast2D direction
 	$Pivot/Sprite.rotation = direction.angle()
 	$CollisionShape2D.rotation = direction.angle()
 
@@ -42,25 +45,25 @@ func update_look_direction(direction):
 func print_direction_info(direction):
 	match(direction):
 		UP:
-			print("up")
+			print("UP")
 			print(direction.angle())
 		RIGHT_UP:
 			print("RIGHT_UP")
 			print(direction.angle())
 		RIGHT:
-			print("right")
+			print("RIGHT")
 			print(direction.angle())
 		RIGHT_DOWN:
 			print("RIGHT_DOWN")
 			print(direction.angle())
 		DOWN:
-			print("down")
+			print("DOWN")
 			print(direction.angle())
 		LEFT_DOWN:
 			print("LEFT_DOWN")
 			print(direction.angle())
 		LEFT:
-			print("left")
+			print("LEFT")
 			print(direction.angle())
 		LEFT_UP:
 			print("LEFT_UP")
