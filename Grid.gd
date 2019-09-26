@@ -1,15 +1,17 @@
 extends TileMap
 
-var tile_size := get_cell_size()
-var half_tile_size := tile_size / 2
+enum ENTITY_TYPES {PLAYER, OBSTACLE}
 
-var grid_size := Vector2(16, 16)
+var tile_size: = get_cell_size()
+var half_tile_size: = tile_size / 2
+var grid_size: = Vector2(cell_quadrant_size, cell_quadrant_size)
+
 var grid = []
 
-#onready var Obstacle = preload("")
+onready var Obstacle = preload("res://environment/obstacles/Obstacle.tscn")
 
 
-func _ready():
+func _ready() -> void:
 	for x in range(grid_size.x):
 		grid.append([])
 		for y in range(grid_size.y):
@@ -17,13 +19,15 @@ func _ready():
 
 	var positions = []
 	for n in range(5):
-		var grid_pos = Vector2(randi() % int(grid_size.x) - 1, randi() % int(grid_size.y) - 1)
+		var grid_pos = Vector2(randi() % int(grid_size.x), randi() % int(grid_size.y))
 		if not grid_pos in positions:
 			positions.append(grid_pos)
 
-	#for position in positions:
-		#var new_obstacle = Obstacle.instance()
-		#add_child(new_obstacle)
+	for pos in positions:
+		var new_obstacle = Obstacle.instance()
+		new_obstacle.position = map_to_world(pos) + half_tile_size
+		grid[pos.x][pos.y] = ENTITY_TYPES.OBSTACLE
+		add_child(new_obstacle)
 
 
 func is_cell_vacant():
