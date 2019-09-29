@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Anamnesis"
+config/name="GridMovement.Prototype"
 run/main_scene="res://TestMain.tscn"
 config/icon="res://icon.png"
 
