@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Anamnesis"
+run/main_scene="res://src/World/Levels/GridTest.tscn"
 config/icon="res://icon.png"
 
 [rendering]
