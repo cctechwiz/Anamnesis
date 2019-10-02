@@ -1,4 +1,4 @@
-extends "res://src/Core/Grid/Pawn.gd"
+extends "res://src/Core/Grid/Gridable.gd"
 
 onready var Grid: = get_parent()
 
