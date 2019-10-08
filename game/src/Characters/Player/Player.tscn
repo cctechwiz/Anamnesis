@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/characters/player/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/characters/player/Player.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "bump"
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -33,7 +33,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.05, 0.15, 0.2, 0.25 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.4, 0.4 ), Vector2( 0.35, 0.35 ), Vector2( 0.45, 0.45 ), Vector2( 0.5, 0.5 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 0.8, 0.8 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
 }
 
 [node name="Player" type="Node2D"]
@@ -49,5 +49,4 @@ anims/walk = SubResource( 2 )
 [node name="Pivot" type="Position2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
