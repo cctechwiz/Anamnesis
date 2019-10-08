@@ -8,15 +8,30 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://characters/player/Player.gd"
+} ]
 _global_script_class_icons={
-
+"Player": ""
 }
 
 [application]
 
-config/name="Anamnesis"
+config/name="GridMovement.Prototype"
+run/main_scene="res://TestMain.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1024
+window/size/test_height=720
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [importer_defaults]
 
