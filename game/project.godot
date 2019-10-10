@@ -19,6 +19,10 @@ config/name="Anamnesis"
 run/main_scene="res://src/World/Levels/GridTest.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=640
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
