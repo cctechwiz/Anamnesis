@@ -30,6 +30,7 @@ func request_move(pawn: Node2D, direction: Vector2) -> Vector2:
 			var pawn_name = get_cell_pawn(cell_target).name
 			print("Cell %s contains %s" %[cell_target, pawn_name])
 			return Vector2.ZERO
+	return Vector2.ZERO
 
 
 func update_pawn_position(pawn: Node2D, cell_start: Vector2, cell_target: Vector2) -> Vector2:
