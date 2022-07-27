@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-export(int) var speed = 200.0
+export(int) var walk_speed = 150.0
+export(int) var run_speed = 250.0
 
 
 func _physics_process(delta: float) -> void:
@@ -15,6 +16,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= 1.0
 
 	velocity = velocity.normalized()
+
+	var speed = walk_speed
+	if Input.is_action_pressed("ui_run"):
+		speed = run_speed
 
 	if velocity == Vector2.ZERO:
 		$AnimationTree.get("parameters/playback").travel("idle")
