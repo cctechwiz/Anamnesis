@@ -1125,7 +1125,7 @@
 79/shapes = [  ]
 79/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="World" type="Node2D"]
 
 [node name="Dirt" type="TileMap" parent="."]
 mode = 1
