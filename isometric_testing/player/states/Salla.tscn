@@ -1,7 +1,10 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/valla.png" type="Texture" id=1]
-[ext_resource path="res://Valla.gd" type="Script" id=2]
+[ext_resource path="res://player/states/Salla.gd" type="Script" id=2]
+[ext_resource path="res://player/states/StateMachine.gd" type="Script" id=3]
+[ext_resource path="res://player/states/Idle.gd" type="Script" id=4]
+[ext_resource path="res://player/states/Walk.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
@@ -235,7 +238,7 @@ graph_offset = Vector2( -13, 49 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
-[node name="Valla" type="KinematicBody2D"]
+[node name="Salla" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -265,3 +268,13 @@ active = true
 parameters/playback = SubResource( 17 )
 parameters/idle/blend_position = Vector2( 0.0348653, -0.539877 )
 parameters/walk/blend_position = Vector2( -0.454834, 0.570552 )
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource( 3 )
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource( 4 )
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource( 5 )

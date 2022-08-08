@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-export(int) var walk_speed = 150.0
-export(int) var run_speed = 250.0
+export var walk_speed := 150.0
+export var run_speed := 250.0
 
 
 func _physics_process(delta: float) -> void:
