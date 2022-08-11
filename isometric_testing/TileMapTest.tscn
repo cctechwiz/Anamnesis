@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ground_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://assets/iso-64x64-building.png" type="Texture" id=2]
-[ext_resource path="res://player/basic/Valla.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/states/Salla.tscn" type="PackedScene" id=4]
 
 [sub_resource type="TileSet" id=1]
@@ -1171,7 +1170,4 @@ format = 1
 tile_data = PoolIntArray( -524269, 6, 0, -458738, 14, 0, -458737, 14, 0, -458736, 9, 0, -458735, 14, 0, -458734, 12, 0, -393200, 15, 0, -393199, 57, 0, -327664, 15, 0, -262128, 13, 0, -196593, 5, 0 )
 
 [node name="Salla" parent="." instance=ExtResource( 4 )]
-position = Vector2( 656, 308 )
-
-[node name="Valla" parent="." instance=ExtResource( 3 )]
-position = Vector2( 370, 368 )
+position = Vector2( 551, 367 )
