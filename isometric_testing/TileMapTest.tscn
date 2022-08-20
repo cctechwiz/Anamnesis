@@ -1171,3 +1171,12 @@ tile_data = PoolIntArray( -524269, 6, 0, -458738, 14, 0, -458737, 14, 0, -458736
 
 [node name="Salla" parent="." instance=ExtResource( 4 )]
 position = Vector2( 551, 367 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 15.0
+margin_right = 152.0
+margin_bottom = 69.0
+text = "Arrow keys to walk
+Shift to run
+Ctrl to roll"
