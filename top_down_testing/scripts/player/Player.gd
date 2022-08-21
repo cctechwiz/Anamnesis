@@ -7,15 +7,8 @@ export var run_speed := 250.0
 export var roll_speed := 200.0
 
 onready var animation_tree := $AnimationTree
-onready var sprites := $Sprites
 
 var velocity
-
-
-func _ready() -> void:
-	# Make sure all sprites are hidden so animations can show them
-	for sprite in sprites.get_children():
-		sprite.visible = false
 
 
 func _physics_process(delta: float) -> void:
