@@ -578,7 +578,7 @@ start_node = "idle"
 
 [sub_resource type="CapsuleShape2D" id=54]
 radius = 5.0
-height = 22.0
+height = 0.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -607,7 +607,7 @@ parameters/idle/blend_position = Vector2( -0.0017432, 0.00862074 )
 parameters/walk/blend_position = Vector2( 0, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1 )
+position = Vector2( 0, 13 )
 shape = SubResource( 54 )
 
 [node name="StateMachine" type="Node" parent="."]
