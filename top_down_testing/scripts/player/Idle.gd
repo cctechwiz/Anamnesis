@@ -11,4 +11,4 @@ func enter(msg := {}) -> void:
 
 func physics_update(_delta: float) -> void:
 	if player.velocity != Vector2.ZERO:
-		state_machine.transition_to("Walk")
+		state_machine.transition_to("walk")

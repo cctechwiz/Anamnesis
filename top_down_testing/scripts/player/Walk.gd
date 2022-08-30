@@ -5,7 +5,7 @@ var last_direction
 
 func physics_update(_delta: float) -> void:
 	if player.velocity == Vector2.ZERO:
-		state_machine.transition_to("Idle", {facing_direction = last_direction})
+		state_machine.transition_to("idle", {facing_direction = last_direction})
 	else:
 		player.animation_tree.get("parameters/playback").travel("walk")
 		player.animation_tree.set("parameters/walk/blend_position", player.velocity)

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WarriorWalk.png-703e2aeaf8cf641187d0b1f1be3a9ccb.stex"
+path="res://.import/death_down.png-5b3f592325d03d0c4d5a743bba7b22b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/WarriorWalk.png"
-dest_files=[ "res://.import/WarriorWalk.png-703e2aeaf8cf641187d0b1f1be3a9ccb.stex" ]
+source_file="res://assets/player/death/death_down.png"
+dest_files=[ "res://.import/death_down.png-5b3f592325d03d0c4d5a743bba7b22b0.stex" ]
 
 [params]
 
